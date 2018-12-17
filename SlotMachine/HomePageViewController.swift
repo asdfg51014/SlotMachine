@@ -28,17 +28,20 @@ class HomePageViewController: UIViewController {
         appNotesCount = userDefault.integer(forKey: appNotesCountKey)
         appNotesCount += 1
         userDefault.set(appNotesCount, forKey: appNotesCountKey)
-        appNotesLabel.text = "App共打開\(appNotesCount)次"
-        playGameNotesLabel.text = "一共玩了\(userDefault.integer(forKey: playGameNotesCountKey))次遊戲"
-        userCoinsLabel.text = "剩餘代幣： 💰\(String(userDefault.integer(forKey: userCoinsKey)))"
-        
+        appNotesLabel.text = "App共打開 \(appNotesCount) 次"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        playGameNotesLabel.text = "一共玩了\(userDefault.integer(forKey: playGameNotesCountKey))次遊戲"
         userCoinsLabel.text = "剩餘代幣： 💰\(String(userDefault.integer(forKey: userCoinsKey)))"
-        playGameNotesLabel.text = "一共玩了\(userDefault.integer(forKey: playGameNotesCountKey))次遊戲"
-        print("Home Page")
+        var playGameCount = userDefault.array(forKey: "GameRecordPriceArray")?.count
+        
+        if playGameCount == nil {
+            playGameNotesLabel.text = "一共玩了0次遊戲"
+        } else {
+            playGameNotesLabel.text = "一共玩了 \(playGameCount!) 次遊戲"
+        }
+        
+        print(userDefault.array(forKey: "GameRecordPriceArray")?.count)
     }
 }

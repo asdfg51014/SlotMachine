@@ -159,12 +159,20 @@
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6k-j8-jGx">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="216"/>
                                             </pickerView>
+                                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmO-dO-EcC">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="216"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="rmO-dO-EcC" firstAttribute="top" secondItem="cN5-M1-x2A" secondAttribute="top" id="8Ey-ze-4Ti"/>
+                                            <constraint firstItem="rmO-dO-EcC" firstAttribute="leading" secondItem="cN5-M1-x2A" secondAttribute="leading" id="Zcs-7H-e6i"/>
                                             <constraint firstAttribute="bottom" secondItem="b6k-j8-jGx" secondAttribute="bottom" id="omo-WB-Wg3"/>
                                             <constraint firstItem="b6k-j8-jGx" firstAttribute="leading" secondItem="cN5-M1-x2A" secondAttribute="leading" id="pxf-1Y-8d9"/>
+                                            <constraint firstAttribute="bottom" secondItem="rmO-dO-EcC" secondAttribute="bottom" id="uCT-ww-i7m"/>
                                             <constraint firstItem="b6k-j8-jGx" firstAttribute="top" secondItem="cN5-M1-x2A" secondAttribute="top" id="vll-jQ-knV"/>
+                                            <constraint firstAttribute="trailing" secondItem="rmO-dO-EcC" secondAttribute="trailing" id="w7t-Bg-b2G"/>
                                             <constraint firstAttribute="trailing" secondItem="b6k-j8-jGx" secondAttribute="trailing" id="zAY-Fx-3Iw"/>
                                         </constraints>
                                     </view>
@@ -225,7 +233,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="qL5-3P-zZc">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="organize" id="WY9-Lo-Yth"/>
+                            <barButtonItem systemItem="organize" id="WY9-Lo-Yth">
+                                <connections>
+                                    <segue destination="nto-io-NsH" kind="show" id="X2D-xQ-J8y"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="refresh" id="Lab-4E-syf">
                                 <connections>
                                     <action selector="reset:" destination="BYZ-38-t0r" id="kGq-zc-jSH"/>
@@ -269,8 +281,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aK4-JM-AaQ">
-                                            <rect key="frame" x="311" y="10" width="48" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <rect key="frame" x="315" y="11" width="44" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -321,4 +333,7 @@
     <resources>
         <image name="slotMachine" width="3200" height="4000"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="X2D-xQ-J8y"/>
+    </inferredMetricsTieBreakers>
 </document>

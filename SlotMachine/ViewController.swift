@@ -11,7 +11,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var depositBool = false
     let depositKey = "DepositKey"
     var playGameNotesCount = 0
-    let playGameNotesCountKey = "PlayGameNotesCount"
     let gameRecordPriceArrayKey = "GameRecordPriceArray"
     let gameRecordTimeArrayKey = "GameRecordTimeArray"
     
@@ -96,12 +95,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         keyCSwitch.isEnabled = true
     }
     
+    func getUserCoins(_ coins: Int){
+        self.userCoins = self.userDefault.integer(forKey: self.userCoinsKey)
+        self.userCoins += coins
+        self.userDefault.set(self.userCoins, forKey: self.userCoinsKey)
+        self.coinsLabel.text = String(self.userCoins)
+    }
+    
     func judgSwitchs(){
         if keyASwitch.isOn == true && keyBSwitch.isOn == true && keyCSwitch.isOn == true {
-            if (dataArrayA[emojiPickerView.selectedRow(inComponent: 0)] == dataArrayB[emojiPickerView.selectedRow(inComponent: 1)] && dataArrayB[emojiPickerView.selectedRow(inComponent: 1)] == dataArrayC[emojiPickerView.selectedRow(inComponent: 2)]) {
+            let emojiPickerViewAComponent = dataArrayA[emojiPickerView.selectedRow(inComponent: 0)]
+            let emojiPickerViewBComponent = dataArrayB[emojiPickerView.selectedRow(inComponent: 1)]
+            let emojiPickerViewCComponent = dataArrayC[emojiPickerView.selectedRow(inComponent: 2)]
+            if (emojiPickerViewAComponent == emojiPickerViewBComponent && emojiPickerViewBComponent == emojiPickerViewCComponent) {
                 print("BINGO")
                 DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.5) {
                     self.winTheGame()
+                }
+            } else if emojiPickerViewAComponent == emojiPickerViewBComponent || emojiPickerViewBComponent == emojiPickerViewCComponent || emojiPickerViewAComponent == emojiPickerViewCComponent {
+                DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.5) {
+                    self.winHalfGame()
                 }
             } else {
                 DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.5) {
@@ -122,13 +135,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func winTheGame(){
         let winAlert = UIAlertController(title: "YOU WIN!!", message: "恭喜獲得1000金幣", preferredStyle: .alert)
         let winAlertAction = UIAlertAction(title: "獲取金幣", style: .default) { (winCoins) in
-            self.userCoins = self.userDefault.integer(forKey: self.userCoinsKey)
-            self.userCoins += 1000
-            self.userDefault.set(self.userCoins, forKey: self.userCoinsKey)
-            self.coinsLabel.text = String(self.userCoins)
+            self.getUserCoins(1000)
         }
         winAlert.addAction(winAlertAction)
         present(winAlert, animated: true, completion: nil)
+    }
+    
+    func winHalfGame(){
+        let winHalfAlert = UIAlertController(title: "差一點！", message: "獲得50金幣", preferredStyle: .alert)
+        let winHalfAction = UIAlertAction(title: "獲取金幣", style: .default) { (winHalfCoins) in
+            self.getUserCoins(50)
+        }
+        winHalfAlert.addAction(winHalfAction)
+        present(winHalfAlert, animated: true, completion: nil)
     }
     
     func loseTheGame(){
@@ -136,9 +155,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if userCoins == 0 {
             let resetAlert = UIAlertController(title: "YOU LOSE!", message: "您已破產，請投胎重新做人 \n記錄將不會刪除", preferredStyle: .alert)
             let resetAlertAction = UIAlertAction(title: "OK", style: .default) { (resetUserCoins) in
-                self.userCoins = self.userDefault.integer(forKey: self.userCoinsKey)
-                self.userCoins = 500
-                self.userDefault.set(self.userCoins, forKey: self.userCoinsKey)
+                self.getUserCoins(500)
             }
         } else {
             let loseAlert = UIAlertController(title: "YOU LOSE!", message: "再來一次吧！", preferredStyle: .alert)
@@ -207,12 +224,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     //MARK: Accelerometer
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            playGameNotesCount = userDefault.integer(forKey: playGameNotesCountKey)
-            playGameNotesCount += 1
-            userDefault.set(playGameNotesCount, forKey: playGameNotesCountKey)
-            timerA = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(startToTurnPickerViewA), userInfo: nil, repeats: true)
-            timerB = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(startToTurnPickerViewB), userInfo: nil, repeats: true)
-            timerC = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(startToTurnPickerViewC), userInfo: nil, repeats: true)
+            timerA = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(startToTurnPickerViewA), userInfo: nil, repeats: true)
+            timerB = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(startToTurnPickerViewB), userInfo: nil, repeats: true)
+            timerC = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(startToTurnPickerViewC), userInfo: nil, repeats: true)
             startGame()
             playAGame()
             resetButton.isEnabled = true
@@ -221,7 +235,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             gameRecordTimeArray = userDefault.array(forKey: gameRecordTimeArrayKey) as? [String] ?? [String]()
             
             let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy:MM:dd:hh:mm"
+            formatter.dateFormat = "yyyy年MM月dd日hh點mm分"
             let time = formatter.string(from: Date())
             gameRecordPriceArray.append("$10")
             gameRecordTimeArray.append(time)
@@ -246,12 +260,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         userCoins = userDefault.integer(forKey: userCoinsKey)
         depositValueAlert()
         coinsLabel.text = String(userCoins)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        print(playGameNotesCount)
-        userDefault.set(playGameNotesCount, forKey: playGameNotesCountKey)
     }
 }
 
