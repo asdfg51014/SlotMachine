@@ -13,6 +13,9 @@
 		2AA8BC6121C73FA400770472 /* SlotMachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC5F21C73FA400770472 /* SlotMachine.xcdatamodeld */; };
 		2AA8BC6321C73FA600770472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8BC6221C73FA600770472 /* Assets.xcassets */; };
 		2AA8BC6621C73FA600770472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8BC6421C73FA600770472 /* LaunchScreen.storyboard */; };
+		2AA8BC6E21C77F4C00770472 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC6D21C77F4C00770472 /* HomePageViewController.swift */; };
+		2AA8BC7121C79F0100770472 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */; };
+		2AA8BC7321C79F1400770472 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2AA8BC6221C73FA600770472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA8BC6521C73FA600770472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AA8BC6721C73FA600770472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA8BC6D21C77F4C00770472 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
+		2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				2AA8BC5821C73FA400770472 /* AppDelegate.swift */,
-				2AA8BC5A21C73FA400770472 /* ViewController.swift */,
 				2AA8BC5C21C73FA400770472 /* Main.storyboard */,
 				2AA8BC6221C73FA600770472 /* Assets.xcassets */,
 				2AA8BC6421C73FA600770472 /* LaunchScreen.storyboard */,
 				2AA8BC6721C73FA600770472 /* Info.plist */,
 				2AA8BC5F21C73FA400770472 /* SlotMachine.xcdatamodeld */,
+				2AA8BC6D21C77F4C00770472 /* HomePageViewController.swift */,
+				2AA8BC5A21C73FA400770472 /* ViewController.swift */,
+				2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */,
+				2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA8BC6E21C77F4C00770472 /* HomePageViewController.swift in Sources */,
 				2AA8BC5B21C73FA400770472 /* ViewController.swift in Sources */,
+				2AA8BC7321C79F1400770472 /* RecordTableViewCell.swift in Sources */,
 				2AA8BC6121C73FA400770472 /* SlotMachine.xcdatamodeld in Sources */,
 				2AA8BC5921C73FA400770472 /* AppDelegate.swift in Sources */,
+				2AA8BC7121C79F0100770472 /* RecordTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
