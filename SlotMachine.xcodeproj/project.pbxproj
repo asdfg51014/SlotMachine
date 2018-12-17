@@ -16,6 +16,7 @@
 		2AA8BC6E21C77F4C00770472 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC6D21C77F4C00770472 /* HomePageViewController.swift */; };
 		2AA8BC7121C79F0100770472 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */; };
 		2AA8BC7321C79F1400770472 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */; };
+		C615E986A3A03BA4E7BF88C6 /* Pods_SlotMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60393FC96DC649040A74233C /* Pods_SlotMachine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		2AA8BC6D21C77F4C00770472 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
 		2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		60393FC96DC649040A74233C /* Pods_SlotMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlotMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC10B388A9FD5644BBF9405 /* Pods-SlotMachine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlotMachine.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine.release.xcconfig"; sourceTree = "<group>"; };
+		E57664DDDA83F18024630A22 /* Pods-SlotMachine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlotMachine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C615E986A3A03BA4E7BF88C6 /* Pods_SlotMachine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				2AA8BC5721C73FA400770472 /* SlotMachine */,
 				2AA8BC5621C73FA400770472 /* Products */,
+				DE69D1B3EEDFF98CCBD2E7BF /* Pods */,
+				9B3A547860C7757AD12C8F53 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,23 @@
 			path = SlotMachine;
 			sourceTree = "<group>";
 		};
+		9B3A547860C7757AD12C8F53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60393FC96DC649040A74233C /* Pods_SlotMachine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE69D1B3EEDFF98CCBD2E7BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E57664DDDA83F18024630A22 /* Pods-SlotMachine.debug.xcconfig */,
+				DBC10B388A9FD5644BBF9405 /* Pods-SlotMachine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AA8BC6A21C73FA600770472 /* Build configuration list for PBXNativeTarget "SlotMachine" */;
 			buildPhases = (
+				700151C70A43DB5193B18AE7 /* [CP] Check Pods Manifest.lock */,
 				2AA8BC5121C73FA400770472 /* Sources */,
 				2AA8BC5221C73FA400770472 /* Frameworks */,
 				2AA8BC5321C73FA400770472 /* Resources */,
+				5263389D740C09FD2C51A4CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +167,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5263389D740C09FD2C51A4CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlotMachine/Pods-SlotMachine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		700151C70A43DB5193B18AE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlotMachine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AA8BC5121C73FA400770472 /* Sources */ = {
@@ -296,6 +371,7 @@
 		};
 		2AA8BC6B21C73FA600770472 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E57664DDDA83F18024630A22 /* Pods-SlotMachine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +390,7 @@
 		};
 		2AA8BC6C21C73FA600770472 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC10B388A9FD5644BBF9405 /* Pods-SlotMachine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
