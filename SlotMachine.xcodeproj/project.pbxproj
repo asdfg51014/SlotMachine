@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0F7EBA21C89A6300F9B155 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EB921C89A6300F9B155 /* SignInViewController.swift */; };
+		2A0F7EBC21C89D9300F9B155 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EBB21C89D9300F9B155 /* SignUpViewController.swift */; };
+		2A0F7EBF21C8A0FD00F9B155 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EBE21C8A0FD00F9B155 /* SignIn.swift */; };
+		2A0F7EC321C8BE7600F9B155 /* CoinsChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EC221C8BE7600F9B155 /* CoinsChange.swift */; };
+		2A0F7EC521C8C9D100F9B155 /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EC421C8C9D100F9B155 /* SignOut.swift */; };
+		2A0F7ED321C9238300F9B155 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7ED221C9238300F9B155 /* SignUp.swift */; };
+		2A0F7ED721C9442D00F9B155 /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7ED621C9442D00F9B155 /* AchievementViewController.swift */; };
+		2A0F7ED921C9485000F9B155 /* ShowRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7ED821C9485000F9B155 /* ShowRecord.swift */; };
+		2A0F7EDB21C9494600F9B155 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EDA21C9494600F9B155 /* RecordModel.swift */; };
+		2A0F7EDD21C9553800F9B155 /* ShowCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EDC21C9553800F9B155 /* ShowCoin.swift */; };
+		2A0F7EDF21C9849500F9B155 /* FirstWinGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EDE21C9849500F9B155 /* FirstWinGame.swift */; };
+		2A0F7EE121C984BF00F9B155 /* Lose10Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EE021C984BF00F9B155 /* Lose10Games.swift */; };
+		2A0F7EE321CA103200F9B155 /* ShowAchievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EE221CA103200F9B155 /* ShowAchievement.swift */; };
+		2A0F7EE521CA10BB00F9B155 /* AchievementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EE421CA10BB00F9B155 /* AchievementModel.swift */; };
+		2A0F7EE821CA610100F9B155 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EE721CA610100F9B155 /* ShopViewController.swift */; };
+		2A0F7EEA21CA61D800F9B155 /* BuyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EE921CA61D800F9B155 /* BuyItem.swift */; };
+		2A0F7EEC21CA838B00F9B155 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EEB21CA838B00F9B155 /* UpdateViewController.swift */; };
+		2A0F7EEE21CA839B00F9B155 /* UpdateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F7EED21CA839B00F9B155 /* UpdateAPI.swift */; };
 		2AA8BC5921C73FA400770472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC5821C73FA400770472 /* AppDelegate.swift */; };
 		2AA8BC5B21C73FA400770472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA8BC5A21C73FA400770472 /* ViewController.swift */; };
 		2AA8BC5E21C73FA400770472 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AA8BC5C21C73FA400770472 /* Main.storyboard */; };
@@ -20,6 +38,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0F7EB921C89A6300F9B155 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2A0F7EBB21C89D9300F9B155 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2A0F7EBE21C8A0FD00F9B155 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		2A0F7EC221C8BE7600F9B155 /* CoinsChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsChange.swift; sourceTree = "<group>"; };
+		2A0F7EC421C8C9D100F9B155 /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
+		2A0F7ED221C9238300F9B155 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		2A0F7ED621C9442D00F9B155 /* AchievementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		2A0F7ED821C9485000F9B155 /* ShowRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowRecord.swift; sourceTree = "<group>"; };
+		2A0F7EDA21C9494600F9B155 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		2A0F7EDC21C9553800F9B155 /* ShowCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCoin.swift; sourceTree = "<group>"; };
+		2A0F7EDE21C9849500F9B155 /* FirstWinGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstWinGame.swift; sourceTree = "<group>"; };
+		2A0F7EE021C984BF00F9B155 /* Lose10Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lose10Games.swift; sourceTree = "<group>"; };
+		2A0F7EE221CA103200F9B155 /* ShowAchievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAchievement.swift; sourceTree = "<group>"; };
+		2A0F7EE421CA10BB00F9B155 /* AchievementModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementModel.swift; sourceTree = "<group>"; };
+		2A0F7EE721CA610100F9B155 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		2A0F7EE921CA61D800F9B155 /* BuyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyItem.swift; sourceTree = "<group>"; };
+		2A0F7EEB21CA838B00F9B155 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		2A0F7EED21CA839B00F9B155 /* UpdateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAPI.swift; sourceTree = "<group>"; };
 		2AA8BC5521C73FA400770472 /* SlotMachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlotMachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA8BC5821C73FA400770472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA8BC5A21C73FA400770472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +84,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0F7EBD21C8A09B00F9B155 /* Sign In or Up */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F7EB921C89A6300F9B155 /* SignInViewController.swift */,
+				2A0F7EBB21C89D9300F9B155 /* SignUpViewController.swift */,
+			);
+			path = "Sign In or Up";
+			sourceTree = "<group>";
+		};
+		2A0F7ED421C9238800F9B155 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F7EC221C8BE7600F9B155 /* CoinsChange.swift */,
+				2A0F7EBE21C8A0FD00F9B155 /* SignIn.swift */,
+				2A0F7EC421C8C9D100F9B155 /* SignOut.swift */,
+				2A0F7ED221C9238300F9B155 /* SignUp.swift */,
+				2A0F7ED821C9485000F9B155 /* ShowRecord.swift */,
+				2A0F7EDC21C9553800F9B155 /* ShowCoin.swift */,
+				2A0F7EDE21C9849500F9B155 /* FirstWinGame.swift */,
+				2A0F7EE021C984BF00F9B155 /* Lose10Games.swift */,
+				2A0F7EE221CA103200F9B155 /* ShowAchievement.swift */,
+				2A0F7EE921CA61D800F9B155 /* BuyItem.swift */,
+				2A0F7EED21CA839B00F9B155 /* UpdateAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2A0F7ED521C92EEC00F9B155 /* PlayGame */ = {
+			isa = PBXGroup;
+			children = (
+				2AA8BC5A21C73FA400770472 /* ViewController.swift */,
+			);
+			path = PlayGame;
+			sourceTree = "<group>";
+		};
+		2A0F7EE621CA10D800F9B155 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A0F7EE421CA10BB00F9B155 /* AchievementModel.swift */,
+				2A0F7EDA21C9494600F9B155 /* RecordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2AA8BC4C21C73FA400770472 = {
 			isa = PBXGroup;
 			children = (
@@ -76,9 +156,15 @@
 				2AA8BC6721C73FA600770472 /* Info.plist */,
 				2AA8BC5F21C73FA400770472 /* SlotMachine.xcdatamodeld */,
 				2AA8BC6D21C77F4C00770472 /* HomePageViewController.swift */,
-				2AA8BC5A21C73FA400770472 /* ViewController.swift */,
 				2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */,
 				2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */,
+				2A0F7ED621C9442D00F9B155 /* AchievementViewController.swift */,
+				2A0F7ED521C92EEC00F9B155 /* PlayGame */,
+				2A0F7EBD21C8A09B00F9B155 /* Sign In or Up */,
+				2A0F7ED421C9238800F9B155 /* API */,
+				2A0F7EE621CA10D800F9B155 /* Model */,
+				2A0F7EE721CA610100F9B155 /* ShopViewController.swift */,
+				2A0F7EEB21CA838B00F9B155 /* UpdateViewController.swift */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";
@@ -222,10 +308,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0F7EEC21CA838B00F9B155 /* UpdateViewController.swift in Sources */,
+				2A0F7EBA21C89A6300F9B155 /* SignInViewController.swift in Sources */,
+				2A0F7EDF21C9849500F9B155 /* FirstWinGame.swift in Sources */,
+				2A0F7EBF21C8A0FD00F9B155 /* SignIn.swift in Sources */,
+				2A0F7EC321C8BE7600F9B155 /* CoinsChange.swift in Sources */,
+				2A0F7EDD21C9553800F9B155 /* ShowCoin.swift in Sources */,
+				2A0F7EE821CA610100F9B155 /* ShopViewController.swift in Sources */,
+				2A0F7EC521C8C9D100F9B155 /* SignOut.swift in Sources */,
 				2AA8BC6E21C77F4C00770472 /* HomePageViewController.swift in Sources */,
+				2A0F7ED321C9238300F9B155 /* SignUp.swift in Sources */,
+				2A0F7EE321CA103200F9B155 /* ShowAchievement.swift in Sources */,
+				2A0F7EBC21C89D9300F9B155 /* SignUpViewController.swift in Sources */,
+				2A0F7EE121C984BF00F9B155 /* Lose10Games.swift in Sources */,
+				2A0F7EE521CA10BB00F9B155 /* AchievementModel.swift in Sources */,
 				2AA8BC5B21C73FA400770472 /* ViewController.swift in Sources */,
+				2A0F7EEE21CA839B00F9B155 /* UpdateAPI.swift in Sources */,
+				2A0F7EDB21C9494600F9B155 /* RecordModel.swift in Sources */,
 				2AA8BC7321C79F1400770472 /* RecordTableViewCell.swift in Sources */,
+				2A0F7ED921C9485000F9B155 /* ShowRecord.swift in Sources */,
 				2AA8BC6121C73FA400770472 /* SlotMachine.xcdatamodeld in Sources */,
+				2A0F7ED721C9442D00F9B155 /* AchievementViewController.swift in Sources */,
+				2A0F7EEA21CA61D800F9B155 /* BuyItem.swift in Sources */,
 				2AA8BC5921C73FA400770472 /* AppDelegate.swift in Sources */,
 				2AA8BC7121C79F0100770472 /* RecordTableViewController.swift in Sources */,
 			);

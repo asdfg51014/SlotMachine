@@ -10,7 +10,8 @@ import UIKit
 
 class RecordTableViewCell: UITableViewCell {
 
-    @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var typeLabel: UILabel!
+    @IBOutlet var bankroolLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     
     

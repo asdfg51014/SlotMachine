@@ -7,20 +7,31 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class RecordTableViewController: UITableViewController {
 
-    var gameRecordPriceArray: [String] = []
-    var gameRecordTimeArray: [String] = []
-    
     let userDefault = UserDefaults.standard
-    let gameRecordPriceArrayKey = "GameRecordPriceArray"
-    let gameRecordTimeArrayKey = "GameRecordTimeArray"
+    let tokenKey = "TokenKey"
+    var userToken = ""
+    let showRecord = ShowRecord()
+    var recordArray: [[ResponseArray]] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameRecordPriceArray = userDefault.array(forKey: gameRecordPriceArrayKey) as? [String] ?? [String]()
-        gameRecordTimeArray = userDefault.array(forKey: gameRecordTimeArrayKey) as? [String] ?? [String]()
+        userToken = userDefault.value(forKey: tokenKey) as! String
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showRecord.showRecord(userToken) { (record) in
+            self.recordArray = record
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -31,13 +42,17 @@ class RecordTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gameRecordPriceArray.count
+        return recordArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecordTableViewCell
-        cell.priceLabel.text = gameRecordPriceArray[indexPath.row]
-        cell.timeLabel.text = gameRecordTimeArray[indexPath.row]
+        
+        cell.bankroolLabel.text = recordArray[indexPath.row][0].bankroll
+        cell.typeLabel.text = recordArray[indexPath.row][0].type
+        cell.timeLabel.text = recordArray[indexPath.row][0].created_at
+        
+        
         
         return cell
     }
