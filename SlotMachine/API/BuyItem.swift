@@ -42,12 +42,10 @@ class BuyItemAPI {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-                    print("response: \(responseString)")
+                    print("BuyItem responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
-                        
                         self.result = json["result"].string ?? ""
                         print(self.result)
-                        
                         call(self.result)
                     }
                     }.resume()

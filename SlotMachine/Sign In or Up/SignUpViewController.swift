@@ -28,17 +28,30 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         } else {
             signUpAPI.signUp(nameTextField.text!, emailTextField.text!, passwordTextField.text!, passwordConfirmationTextField.text!) { (result) in
                 self.result = result
-                self.userToken = self.userDefault.value(forKey: self.tokenKey) as! String
-                if self.result == "true" {
-                    self.coinchange.addCoin("500", self.userToken, "Sign Up", call: { (icons) in
-                        print("500 get")
-                    })
-                    self.createSccessAlertFunction()
-                } else {
-                    self.alertFunction()
+                
+                DispatchQueue.main.async {
+                    self.userToken = self.userDefault.value(forKey: self.tokenKey) as! String
+                    if self.result == "true" {
+                        self.coinchange.addCoin("500", self.userToken, "Sign Up", call: { (icons) in
+                            self.get500Coins()
+                            print("500 get")
+                        })
+                        
+                    } else {
+                        self.alertFunction()
+                    }
                 }
             }
         }
+    }
+    
+    func get500Coins(){
+        let alertController = UIAlertController(title: "恭喜", message: "創建帳號獲得500金幣！", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (goHomePage) in
+            self.createSccessAlertFunction()
+        }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func alertFunction(){
@@ -58,11 +71,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         let sccessAlertAction = UIAlertAction(title: "OK", style: .default) { (sccessAlert) in
             let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "IntoTheGame")
             self.navigationController?.pushViewController(homeVC, animated: true)
-            
-//            self.userToken = self.userDefault.value(forKey: self.tokenKey) as! String
-            
-            
-            
         }
         sccessAlert.addAction(sccessAlertAction)
         present(sccessAlert, animated: true, completion: nil)
@@ -74,8 +82,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
 

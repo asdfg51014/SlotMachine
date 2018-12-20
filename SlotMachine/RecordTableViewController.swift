@@ -37,7 +37,6 @@ class RecordTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
         return 1
     }
 
@@ -51,8 +50,6 @@ class RecordTableViewController: UITableViewController {
         cell.bankroolLabel.text = recordArray[indexPath.row][0].bankroll
         cell.typeLabel.text = recordArray[indexPath.row][0].type
         cell.timeLabel.text = recordArray[indexPath.row][0].created_at
-        
-        
         
         return cell
     }
