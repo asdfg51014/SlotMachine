@@ -14,7 +14,6 @@ class RecordTableViewCell: UITableViewCell {
     @IBOutlet var bankroolLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +21,6 @@ class RecordTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

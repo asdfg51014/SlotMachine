@@ -44,11 +44,8 @@ class SignInAPI {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-//                    print("!@#$%^&*(")
-//                    print("signIn responseString: \(responseString)")
-//                    print("------")
+                    print("SignIn responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
-//                        print(json)
                         self.coin = json["response"]["coin"].int ?? 0
                         self.name = json["response"]["name"].string ?? ""
                         self.result = json["result"].string ?? ""

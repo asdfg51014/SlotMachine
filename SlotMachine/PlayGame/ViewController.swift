@@ -188,7 +188,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let winHalfAction = UIAlertAction(title: "獲取金幣", style: .default) { (winHalfCoins) in
             self.resetGame()
             self.coinsChange.addCoin("50", self.userToken, "Win The Half Game", call: { (coins) in
-//                self.userCoins = coins
                 self.showCoin()
             })
         }
@@ -214,7 +213,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let loseAlert = UIAlertController(title: "YOU LOSE!", message: "再來一次吧！", preferredStyle: .alert)
             let okAlertAction = UIAlertAction(title: "再玩一次", style: .default) { (resetTheGame) in
                 self.resetGame()
-                
             }
             
             loseAlert.addAction(okAlertAction)
@@ -272,14 +270,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             gameRecordPriceArray = userDefault.array(forKey: gameRecordPriceArrayKey) as? [String] ?? [String]()
             gameRecordTimeArray = userDefault.array(forKey: gameRecordTimeArrayKey) as? [String] ?? [String]()
-            
-//            let formatter = DateFormatter()
-//            formatter.dateFormat = "yyyy年MM月dd日hh點mm分"
-//            let time = formatter.string(from: Date())
-//            gameRecordPriceArray.append("$10")
-//            gameRecordTimeArray.append(time)
-//            userDefault.set(gameRecordPriceArray, forKey: gameRecordPriceArrayKey)
-//            userDefault.set(gameRecordTimeArray, forKey: gameRecordTimeArrayKey)
         }
     }
     
@@ -295,16 +285,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         emojiPickerView.delegate = self
         emojiPickerView.dataSource = self
         resetGame()
-        
         coinsLabel.text = "Loding..."
-        
         userToken = userDefault.value(forKey: userTokenKey) as! String
-        showCoin()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        showCoin()
     }
 }
 

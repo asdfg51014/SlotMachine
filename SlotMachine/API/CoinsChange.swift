@@ -46,12 +46,8 @@ class CoinsChange {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-//                    print("!@#$%^&*(")
-//                    print("signIn responseString: \(responseString)")
-//                    print("------")
-//                    print("get add coin")
+                    print("AddConin responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
-//                        print(json)
                         self.result = json["result"].string ?? ""
                         self.userCoin = json["coin"].string ?? ""
                         call(self.userCoin)
@@ -89,11 +85,8 @@ class CoinsChange {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-//                    print("!@#$%^&*(")
-//                    print("signIn responseString: \(responseString)")
-//                    print("------")
+                    print("MinusCoins responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
-//                        print(json)
                         self.result = json["result"].string ?? ""
                         self.userCoin = json["coin"].string ?? ""
                         call(self.userCoin)

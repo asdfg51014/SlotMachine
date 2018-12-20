@@ -44,10 +44,8 @@ class SignUpAPI {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-//                    print("signIn responseString: \(responseString)")
-//                    print("------")
+                    print("SignUp responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
-//                        print(json)
                         self.result = json["result"].string ?? ""
                         self.name = json["response"]["name"].string ?? ""
                         self.apiToken = json["response"]["api_token"].string ?? ""

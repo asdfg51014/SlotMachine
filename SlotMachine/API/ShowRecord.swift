@@ -39,12 +39,10 @@ class ShowRecord {
                     let response = response
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-                    print("!@#$%^&*(")
-                    print("signIn responseString: \(responseString)")
+                    print("ShowRecord responseString: \(responseString)")
                    let decoder = JSONDecoder()
                     if let recordData = try? decoder.decode(RecordModel.self, from: data) {
                         self.recordArray = [recordData]
-                        
                         for i in self.recordArray[0].response {
                             print(i)
                             self.recorda.append(i)

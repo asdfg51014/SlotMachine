@@ -100,13 +100,13 @@
 				2A0F7EBE21C8A0FD00F9B155 /* SignIn.swift */,
 				2A0F7EC421C8C9D100F9B155 /* SignOut.swift */,
 				2A0F7ED221C9238300F9B155 /* SignUp.swift */,
+				2A0F7EED21CA839B00F9B155 /* UpdateAPI.swift */,
 				2A0F7ED821C9485000F9B155 /* ShowRecord.swift */,
 				2A0F7EDC21C9553800F9B155 /* ShowCoin.swift */,
 				2A0F7EDE21C9849500F9B155 /* FirstWinGame.swift */,
 				2A0F7EE021C984BF00F9B155 /* Lose10Games.swift */,
 				2A0F7EE221CA103200F9B155 /* ShowAchievement.swift */,
 				2A0F7EE921CA61D800F9B155 /* BuyItem.swift */,
-				2A0F7EED21CA839B00F9B155 /* UpdateAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -159,12 +159,12 @@
 				2AA8BC7021C79F0100770472 /* RecordTableViewController.swift */,
 				2AA8BC7221C79F1400770472 /* RecordTableViewCell.swift */,
 				2A0F7ED621C9442D00F9B155 /* AchievementViewController.swift */,
+				2A0F7EE721CA610100F9B155 /* ShopViewController.swift */,
+				2A0F7EEB21CA838B00F9B155 /* UpdateViewController.swift */,
 				2A0F7ED521C92EEC00F9B155 /* PlayGame */,
 				2A0F7EBD21C8A09B00F9B155 /* Sign In or Up */,
 				2A0F7ED421C9238800F9B155 /* API */,
 				2A0F7EE621CA10D800F9B155 /* Model */,
-				2A0F7EE721CA610100F9B155 /* ShopViewController.swift */,
-				2A0F7EEB21CA838B00F9B155 /* UpdateViewController.swift */,
 			);
 			path = SlotMachine;
 			sourceTree = "<group>";

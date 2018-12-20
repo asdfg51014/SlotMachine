@@ -38,9 +38,7 @@ class Lose10Games {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-                    print("!@#$%^&*(")
-                    print("signIn responseString: \(responseString)")
-                    print("------")
+                    print("Lose10Games responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
                         print(json)
                         self.result = json["result"].string ?? ""

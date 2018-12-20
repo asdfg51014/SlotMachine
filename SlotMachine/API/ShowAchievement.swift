@@ -12,7 +12,7 @@ import SwiftyJSON
 class ShowAchievement {
     
     var achievementArray: [AchievementMedol] = []
-    var achievementResponse: [AchievementResponse] = []
+    var achievementResponse: AchievementResponse?
     
     func showAchievement(_ token: String, call: @escaping (AchievementResponse) -> Void){
         DispatchQueue.main.async {
@@ -38,29 +38,12 @@ class ShowAchievement {
                     let response = response
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-                  
-                    
-                    print("!@#$%^&*(")
-                    print("signIn responseString: \(responseString)")
+                    print("ShowAchievement responseString: \(responseString)")
                     let decoder = JSONDecoder()
                     let achievementData = try? decoder.decode(AchievementMedol.self, from: data)
-                    print("____________")
-                    let a = achievementData?.response
-                    print(achievementData?.response.allWin)
+                    self.achievementResponse = achievementData?.response
                     
-                    
-//                    let json: JSON = try! JSON(data: data)
-//                    print("------------")
-//                    if let result = json[]["response"].array {
-//                        print(result["winAll"])
-//                    }
-//
-//                    print(json["result"].string)
-
-                    
-                    call(a!)
-                    
-                    
+                    call(self.achievementResponse!)
                     
                     }.resume()
             } catch {

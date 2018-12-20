@@ -28,17 +28,14 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         } else {
             signInAPI.signIn(emailTextField.text!, passwordTextField.text!, call: {(result) in
                 self.result = result
-                print("-------------")
-                print(self.result)
-                if self.result == "true"{
-                    self.sccessAlertFunction()
-                } else {
-                    self.alertFunction()
+                DispatchQueue.main.sync {
+                    if self.result == "true"{
+                        self.sccessAlertFunction()
+                    } else {
+                        self.alertFunction()
+                    }
                 }
             })
-            
-            
-            
         }
         
     }

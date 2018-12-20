@@ -56,7 +56,6 @@ class AchievementViewController: UIViewController {
         } else {
             win2GamesImageView.image = UIImage(named: "unCheck")
         }
-        
     }
     
     override func viewDidLoad() {

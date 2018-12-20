@@ -36,14 +36,9 @@ class ShowCoins {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-//                    print("!@#$%^&*(")
-//                    print("signIn responseString: \(responseString)")
-//                    print("------")
+                    print("ShowCoins responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
-//                        print(json)
-                        
                         self.userCoins = json["coin"].string ?? ""
-//                        print(self.userCoins)
                         call(self.userCoins)
                     }
                     }.resume()

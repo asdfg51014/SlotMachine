@@ -45,10 +45,6 @@ class HomePageViewController: UIViewController {
         }
     }
     
-    func add500Coins(){
-        
-    }
-    
     func showCoinsFunction(){
         self.showCoins.showCoins(self.userToken) { (coins) in
             self.userCoins = coins
@@ -99,23 +95,19 @@ class HomePageViewController: UIViewController {
             let alertAction = UIAlertAction(title: "OK", style: .default) { (depositCoins) in
                 self.depositBool = true
                 self.userDefault.set(self.depositBool, forKey: self.depositKey)
-//                self.userCoins += 500
-                //POST
 
                 self.coinsChange.addCoin("500", self.tokenKey, "First Game", call: { (coins) in
-//                    self.userCoins = coins
                     self.userCoinsLabel.text = String(self.userCoins)
                 })
-                //
             }
             firstAlert.addAction(alertAction)
             present(firstAlert, animated: true, completion: nil)
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("afullafsvhlsivuh")
         userToken = userDefault.value(forKey: tokenKey) as! String
         
     }
@@ -123,7 +115,7 @@ class HomePageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         userCoinsLabel.text = "Loading..."
-        showCoinsFunction()//        depositValueAlert()
+        showCoinsFunction()
         appNotesFunction()
         playGameCountFunction()
     }

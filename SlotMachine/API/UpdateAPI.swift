@@ -40,13 +40,11 @@ class UpdateAPI {
                     }
                     if let response = response as? HTTPURLResponse {}
                     let responseString = String(data: data, encoding: .utf8)
-                    print("response: \(responseString)")
-                    print("response: \(responseString)")
+                    print("Update responseString: \(responseString)")
                     if let json: JSON = try? JSON(data: data){
                         self.result = json["result"].string ?? ""
                         self.userToken = json["response"]["api_token"].string ?? ""
                         self.userDefault.set(self.userToken, forKey: self.tokenKey)
-                        
                         
                         call(self.result)
                     }
